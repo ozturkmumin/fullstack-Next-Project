@@ -1,7 +1,7 @@
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Theme } from "@radix-ui/themes";
+import { Theme, ThemePanel } from "@radix-ui/themes";
 import { Inter } from "next/font/google";
 import NavBar from "./NavBar";
 
@@ -16,9 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme>
+        <Theme panelBackground="solid">
           <NavBar />
-          <main>{children}</main>
+          <main className="p-5">{children}</main>
         </Theme>
       </body>
     </html>
